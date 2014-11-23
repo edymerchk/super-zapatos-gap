@@ -1,5 +1,3 @@
-
-
 describe StoresController do
 
   context "GET Actions" do
