@@ -2,6 +2,8 @@ module API
   class Articles < Grape::API
 
     include API::Defaults
+    error_formatter :json, API::ErrorFormatter
+
 
     resource :articles do
       desc "Return list of all artciles"
@@ -15,6 +17,9 @@ module API
       end
 
 
+      params do
+        requires :id, type: Integer
+      end
       get "stores/:id" do
         store = Store.find(params[:id])
         store.articles
