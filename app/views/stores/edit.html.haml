@@ -1,7 +1,7 @@
-%h1 Editing store
 
-= render 'form'
-
-= link_to 'Show', @store
-\|
-= link_to 'Back', stores_path
+.col-md-6.col-md-offset-3
+  .pull-right
+    = link_to 'Back', stores_path, class:'btn btn-warning btn-corner'
+  .well
+    %h2 Editing store
+    = render 'form'

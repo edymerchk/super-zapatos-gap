@@ -1,12 +1,24 @@
-%p#notice= notice
+.col-md-8.col-md-offset-2
+  .panel.panel-default
+    .panel-heading
+      %center
+        %h4=@store.name
+    .panel-body
+      %table.table
+        %tr
+          %td
+            %strong
+              Name:
+          %td
+            = @store.name
+        %tr
+          %td
+            %strong
+              Address:
+          %td
+            = @store.address
 
-%p
-  %b Name:
-  = @store.name
-%p
-  %b Address:
-  = @store.address
-
-= link_to 'Edit', edit_store_path(@store)
-\|
-= link_to 'Back', stores_path
+  %center
+    = link_to 'Edit', edit_store_path(@store), class:'btn'
+    |
+    = link_to 'Back', stores_path, class:'btn'
