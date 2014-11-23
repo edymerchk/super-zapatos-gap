@@ -1,6 +1,8 @@
 module API
   class Stores < Grape::API
 
+    include API::Defaults
+
     resource :stores do
       desc "Return list of all stores"
       get do

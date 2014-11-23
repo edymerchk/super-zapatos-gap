@@ -22,7 +22,12 @@ module API
       end
       get "stores/:id" do
         store = Store.find(params[:id])
-        store.articles
+        articles = store.articles
+        {
+          articles: articles,
+          success: true,
+          total_elements: articles.size
+        }
       end
     end
   end
