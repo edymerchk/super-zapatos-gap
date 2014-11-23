@@ -1,0 +1,29 @@
+%h1 Listing articles
+
+%table.table.table-striped.table-bordered
+  %tr
+    %th Name
+    %th Description
+    %th Price
+    %th Total in vault
+    %th Total in shelf
+    %th Store
+    %th
+
+  - @articles.each do |article|
+    %tr
+      %td= article.name
+      %td= article.description
+      %td= article.price
+      %td= article.total_in_vault
+      %td= article.total_in_shelf
+      %td= article.store.name
+      %td
+        %center
+          = link_to 'Show', article
+          = link_to 'Edit', edit_article_path(article)
+          = link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Article', new_article_path, class: 'btn btn-primary'

@@ -1,0 +1,13 @@
+= simple_form_for(@article) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :price
+    = f.input :total_in_vault
+    = f.input :total_in_shelf
+    = f.association :store
+
+  .form-actions
+    = f.submit class: 'btn btn-lg btn-success btn-block', disable_with: 'Processing...'
