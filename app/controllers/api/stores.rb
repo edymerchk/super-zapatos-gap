@@ -1,11 +1,15 @@
 module API
   class Stores < Grape::API
-    format :json
 
     resource :stores do
       desc "Return list of all stores"
       get do
-        Store.all
+        stores = Store.all
+        {
+          stores: stores,
+          success: true,
+          total_elements: stores.size
+        }
       end
     end
   end
