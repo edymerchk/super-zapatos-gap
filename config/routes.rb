@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :articles
-
-  resources :stores
 
   root to: "home#index"
+
+  resources :articles
+  resources :stores
+
+  mount API::Base => '/services'
+
 end

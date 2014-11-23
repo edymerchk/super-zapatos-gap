@@ -13,6 +13,9 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
+gem 'grape'
+
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
