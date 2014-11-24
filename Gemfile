@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'grape'
+gem 'grape-entity'
 
 
 group :development do

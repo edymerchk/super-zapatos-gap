@@ -8,12 +8,10 @@ module API
     resource :articles do
       desc "Return list of all artciles"
       get do
-        articles = Article.all
-        {
-          articles: articles,
-          success: true,
-          total_elements: articles.size
-        }
+        articles = Article.includes(:store)
+        present :articles, articles, with: API::Entities::Article
+        present :success, true
+        present :total_elements, articles.size
       end
 
 
@@ -23,11 +21,9 @@ module API
       get "stores/:id" do
         store = Store.find(params[:id])
         articles = store.articles
-        {
-          articles: articles,
-          success: true,
-          total_elements: articles.size
-        }
+        present :articles, articles, with: API::Entities::Article
+        present :success, true
+        present :total_elements, articles.size
       end
     end
   end

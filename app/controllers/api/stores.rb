@@ -7,11 +7,9 @@ module API
       desc "Return list of all stores"
       get do
         stores = Store.all
-        {
-          stores: stores,
-          success: true,
-          total_elements: stores.size
-        }
+        present :stores, stores, with: API::Entities::Store
+        present :success, true
+        present :total_elements, stores.size
       end
     end
   end
