@@ -15,6 +15,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'grape'
 gem 'grape-entity'
+gem "font-awesome-rails"
 
 
 group :development do

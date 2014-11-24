@@ -20,9 +20,9 @@
       %td= article.store.name
       %td
         %center
-          = link_to 'Show', article
-          = link_to 'Edit', edit_article_path(article)
-          = link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          = link_to fa_icon("search"), article
+          = link_to fa_icon("pencil-square-o"), edit_article_path(article)
+          = link_to fa_icon("trash-o"), article, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

@@ -12,9 +12,9 @@
       %td= store.address
       %td
         %center
-          = link_to 'Show', store
-          = link_to 'Edit', edit_store_path(store)
-          = link_to 'Destroy', store, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          = link_to fa_icon("search"), store
+          = link_to fa_icon("pencil-square-o"), edit_store_path(store)
+          = link_to fa_icon("trash-o"), store, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
