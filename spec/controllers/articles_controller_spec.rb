@@ -38,12 +38,12 @@ describe ArticlesController do
 
       it "saves the new article in the db" do
         expect{
-          post :create, article: attributes_for(:article)
+          post :create, article: attributes_for(:article, store_id: 1)
           }.to change(Article, :count).by(1)
       end
 
       it "redirects to the articles index page" do
-        post :create, article: attributes_for(:article)
+        post :create, article: attributes_for(:article, store_id: 1)
         expect(response).to redirect_to articles_path
       end
     end

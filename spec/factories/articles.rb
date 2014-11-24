@@ -5,7 +5,8 @@ FactoryGirl.define do
     price 20.5
     total_in_vault {rand(1..100)}
     total_in_shelf {rand(1..100)}
-    store_id 1
+
+    association :store
 
     factory :invalid_article do
       name nil
