@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'grape'
 gem 'grape-entity'
 gem "font-awesome-rails"
+gem 'faker'
 
 
 group :development do
@@ -28,7 +29,6 @@ group :development do
 end
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
