@@ -1,6 +1,10 @@
 Super Zapatos
 ================
 
+[![Build Status](https://circleci.com/gh/edymerchk/super-zapatos-gap.svg?style=shield&circle-token=8573f7a7c131c0ab19f3f29a7d5d210187641290)](https://circleci.com/gh/edymerchk/super-zapatos-gap)
+
+
+
 Sample Rails Application that use [Grape](https://github.com/intridea/grape) to provide a json API
 
 Ruby on Rails
